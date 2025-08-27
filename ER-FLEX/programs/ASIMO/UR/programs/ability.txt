@@ -1,0 +1,95 @@
+ Program
+   Variables Setup
+   Robot Program
+     Home (Safe)
+     ER-Ability
+       'Insert event nodes here'
+       EventNode: calibrateFailed
+         Popup: Calibrate to maker failed, marker not present
+       EventNode: Gripper_Activate
+         Gripper Activate
+       EventNode: Gripper_Open1
+         Gripper Open (1)
+       EventNode: Gripper_Close
+         Gripper Close (1)
+       EventNode: Unload
+         Unload_ref≔__er_Unload_arg_pose
+         MoveJ
+           Waypoint_2
+         Pallet_2
+           Patterns
+             Line_Pattern_2
+               StartItem_2
+               EndItem_2
+           Layers
+           At Each Item
+             Generated Movements
+               MoveJ
+                 Approach_3
+               MoveL
+                 ToolActionPoi_3
+               Tool action
+                 Gripper Close (1)
+               MoveL
+                 Exit_4
+         MoveJ
+           Waypoint_2
+         Pallet_1
+           Patterns
+             Line_Pattern_1
+               StartItem_1
+               EndItem_1
+           Layers
+           At Each Item
+             Generated Movements
+               MoveJ
+                 Approach
+               MoveL
+                 ToolActionPoint
+               Tool action
+                 Gripper Open (1)
+               MoveL
+                 Exit_1
+         MoveJ
+           Waypoint_2
+       EventNode: Palletize
+         Pallet_ref≔__er_Palletize_arg_pose
+         MoveJ
+           'Waypoint_6'
+           Waypoint_2
+         Pallet_3
+           Patterns
+             Line_Pattern_5
+               StartItem_5
+               EndItem_5
+           Layers
+           At Each Item
+             Generated Movements
+               MoveJ
+                 Approach_2
+               MoveL
+                 ToolActionPoi_2
+               Tool action
+                 Gripper Close (1)
+               MoveL
+                 Exit_3
+         MoveJ
+           Waypoint_2
+         Pallet_4
+           Patterns
+             Line_Pattern_6
+               StartItem_6
+               EndItem_6
+           Layers
+           At Each Item
+             Generated Movements
+               MoveJ
+                 Approach_3
+               MoveL
+                 ToolActionPoi_3
+               Tool action
+                 Gripper Open (1)
+               MoveL
+                 Exit_4
+         MoveJ
+           Waypoint_2

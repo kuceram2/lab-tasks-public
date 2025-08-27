@@ -1,0 +1,89 @@
+ Program
+   Variables Setup
+   Robot Program
+     Home (Safe)
+     ER-Ability
+       EventNode: GripOpen
+         Gripper Open (1)
+       EventNode: GripClosed
+         Gripper Close (1)
+       EventNode: Unload
+         Unload_ref≔__er_Unload_arg_pose
+         MoveJ
+           Waypoint_2
+         Pallet_5
+           Patterns
+             Line_Pattern_7
+               StartItem_7
+               EndItem_7
+           Layers
+           At Each Item
+             Generated Movements
+               MoveJ
+                 Approach_1
+               MoveL
+                 ToolActionPoi_1
+               Tool action
+                 Gripper Close (1)
+               MoveL
+                 Exit_2
+         MoveJ
+           Waypoint_2
+         Pallet_1
+           Patterns
+             Line_Pattern_1
+               StartItem_1
+               EndItem_1
+           Layers
+           At Each Item
+             Generated Movements
+               MoveJ
+                 Approach
+               MoveL
+                 ToolActionPoint
+               Tool action
+                 Gripper Open (1)
+               MoveL
+                 Exit_1
+         MoveJ
+           Waypoint_2
+       EventNode: Palletize
+         Pallet_ref≔__er_Palletize_arg_pose
+         MoveJ
+           Waypoint_2
+         Pallet_3
+           Patterns
+             Line_Pattern_5
+               StartItem_5
+               EndItem_5
+           Layers
+           At Each Item
+             Generated Movements
+               MoveJ
+                 Approach
+               MoveL
+                 ToolActionPoint
+               Tool action
+                 Gripper Close (1)
+               MoveL
+                 Exit_1
+         MoveJ
+           Waypoint_2
+         Pallet_4
+           Patterns
+             Line_Pattern_6
+               StartItem_6
+               EndItem_6
+           Layers
+           At Each Item
+             Generated Movements
+               MoveJ
+                 Approach_1
+               MoveL
+                 ToolActionPoi_1
+               Tool action
+                 Gripper Open (1)
+               MoveL
+                 Exit_2
+         MoveJ
+           Waypoint_2

@@ -1,0 +1,26 @@
+ Program
+   Variables Setup
+   Robot Program
+     EventNode: PalletizeNode
+       Pallet_ref≔__er_MoveNode_arg_pose
+       var_1≔__er_MoveNode_cart_pose
+       MoveJ
+         Waypoint_1
+       Pallet_A_2
+         Patterns
+           Line_Pattern_5
+             StartItem_5
+             EndItem_5
+         Layers
+         At Each Item
+           Generated Movements
+             MoveJ
+               Approach
+             MoveL
+               ToolActionPoint
+             Tool action
+               Gripper Close (1)
+             MoveL
+               Exit_1
+       'Loop 3 times'
+       'Loop 3 times'
